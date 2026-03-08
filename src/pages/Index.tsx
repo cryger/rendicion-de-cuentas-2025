@@ -7,6 +7,8 @@ import footerLogo from "@/assets/footer-logo.png";
 import { FileText, Users, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "../core/footer";
+import SabiasQue from "@/core/SabiasQue";
+import ImageSlider from "../core/ImageSlider";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -108,30 +110,10 @@ const Index = () => {
       </section>
 
       {/* Did You Know Section */}
-      <section className="py-16 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center justify-center mb-8">
-              <div className="bg-destructive text-destructive-foreground px-6 py-2 rounded-full font-bold text-lg shadow-md">
-                ¿SABÍAS QUÉ?
-              </div>
-            </div>
-            
-            <div className="relative rounded-2xl overflow-hidden shadow-[var(--card-shadow)] hover:shadow-[var(--hover-shadow)] transition-shadow duration-300">
-              <img 
-                src={medicalSection} 
-                alt="Servicios médicos Hospital San José del Guaviare"
-                className="w-full h-auto"
-              />
-            </div>
+      <section className="sabias-section">
 
-            <div className="mt-8 bg-secondary/50 rounded-xl p-6 border border-border">
-              <p className="text-center text-sm text-muted-foreground leading-relaxed">
-                El hospital cuenta con el más avanzado equipamiento médico para diagnóstico por imágenes en el Departamento del Guaviare, incluyendo radiología digital que permite diagnósticos más precisos y oportunos para nuestros pacientes.
-              </p>
-            </div>
-          </div>
-        </div>
+        <ImageSlider></ImageSlider>
+
       </section>
 
       {/* Footer */}

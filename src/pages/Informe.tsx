@@ -88,8 +88,19 @@ const Informe = () => {
 
             {/* Botón descarga */}
             <div className="mt-10 flex justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md">
-                Descargar Informe de Gestión
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
+                asChild
+              >
+                <a
+                  href="https://esehospitalguaviare.gov.co/resourses/archivos/pdf/Informe%20de%20Gesti%C3%B3n%20cuarto%20trimestre%202025.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Descargar Informe de Gestión
+                </a>
               </Button>
             </div>
 
