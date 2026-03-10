@@ -23,7 +23,7 @@ const Preguntas = () => {
           <div className="max-w-5xl mx-auto">
 
             <h2 className="text-3xl font-bold text-center mb-8 text-primary">
-              Avisos de Interés
+              Banco de Preguntas
             </h2>
 
             <div className="space-y-6">
@@ -40,11 +40,19 @@ const Preguntas = () => {
 
               <div className="p-6 bg-background rounded-xl shadow">
                 <h3 className="font-semibold text-lg mb-2">
-                  Publicación Informe Preliminar
+                  Banco de Preguntas - Informacion de Interes
                 </h3>
-                <p className="text-sm text-muted-foreground">
-                  Se encuentra disponible el informe preliminar de gestión institucional.
-                </p>
+                <iframe
+                  width= "1200"
+                  height="480"
+                  src="https://forms.office.com/Pages/ResponsePage.aspx?id=RcgWvpY6jU61nL6_t-gOxbNKBDBv_vBGv2iyxF9R8rdUMkVEUTdHM1MwSjIyRUFVUEFGQ1M0TE5LVS4u&embed=true"
+                  frameBorder="0"
+                  marginWidth={0}
+                  marginHeight={0}
+                  style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
+                  allowFullScreen
+                />
+
               </div>
 
             </div>

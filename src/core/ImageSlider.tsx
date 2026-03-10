@@ -1,25 +1,25 @@
 // ImageSlider.tsx
 // Instalación necesaria: npm install embla-carousel-react embla-carousel-autoplay
-// Uso: <ImageSlider images={[...]} autoplay={true} />
 
 import { useEffect, useCallback, useState, CSSProperties } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import AdquisicionBiomedicos from "../assets/adquisicion_equipos_biomedicos.png";
-import AvanceHospital from "../assets/avance_hospital_2026.png";
-import AtencionInfancia from "../assets/atencion_infancia.png";
-import PersonalRural from "../assets/personal_nuevo_ingreso_rural.png";
+import AdquisicionBiomedicos from "../assets/adquisicion_equipos_biomedicos.jpeg";
+import AvanceHospital from "../assets/avance_hospital_2026.jpeg";
+import AtencionInfancia from "../assets/atencion_infancia.jpeg";
+import PersonalRural from "../assets/personal_nuevo_ingreso_rural.jpeg";
 
 // ── Tipos ─────────────────────────────────────────────────────────────────────
 interface SlideImage {
   src: string;
   alt: string;
   caption?: string;
-  description?: string; // Texto descriptivo debajo del caption
-  ctaLabel?: string;    // Texto del botón, ej: "Ver más"
-  ctaHref?: string;     // URL de destino, ej: "/informes/2024"
-  ctaTarget?: "_blank" | "_self"; // Abre en nueva pestaña o misma pestaña
+  description?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  ctaTarget?: "_blank" | "_self";
+  objectPosition?: string; // Ej: "center top", "center 30%", "left center"
 }
 
 interface ImageSliderProps {
@@ -28,13 +28,13 @@ interface ImageSliderProps {
   delay?: number;
 }
 
-// ── Datos de ejemplo — reemplaza con tus imágenes reales ──────────────────────
+// ── Imágenes por defecto ───────────────────────────────────────────────────────
 const DEFAULT_IMAGES: SlideImage[] = [
   {
     src: AvanceHospital,
-    alt: "Logro 1",
-    caption: "Inversión en infraestructura 2025",
-    description: "Se ejecutaron 42 proyectos viales que beneficiaron a más de 300.000 habitantes en zonas rurales y urbanas del departamento.",
+    alt: "¿Sabías que nuestro compromiso con tu salud se traduce en resultados reales? ",
+    caption: "¿Sabías que nuestro compromiso con tu salud se traduce en resultados reales?,Aquí te presentamos 5 grandes logros.",
+    description: "Uno: Alcanzamos la cifra de 274 mil órdenes de laboratorio clínico, garantizando diagnósticos oportunos para nuestra gente.",
     ctaLabel: "Ver informe",
     ctaHref: "/informes/infraestructura",
     ctaTarget: "_self",
@@ -56,9 +56,17 @@ const DEFAULT_IMAGES: SlideImage[] = [
     ctaLabel: "Ver resultados",
     ctaHref: "/educacion",
     ctaTarget: "_self",
-  }
+  },
+  {
+    src: AdquisicionBiomedicos,
+    alt: "Logro 4",
+    caption: "Adquisición de equipos biomédicos",
+    description: "Se modernizó el equipamiento médico de los centros de salud del departamento para mejorar la calidad de atención.",
+    ctaLabel: "Ver informe",
+    ctaHref: "/informes/equipos-biomedicos",
+    ctaTarget: "_self",
+  },
 ];
-// ─────────────────────────────────────────────────────────────────────────────
 
 export default function ImageSlider({
   images = DEFAULT_IMAGES,
@@ -92,7 +100,6 @@ export default function ImageSlider({
 
   return (
     <div style={styles.wrapper}>
-      {/* Viewport */}
       <div style={styles.viewport} ref={emblaRef}>
         <div style={styles.container}>
           {images.map((img, i) => (
@@ -100,7 +107,10 @@ export default function ImageSlider({
               <img
                 src={img.src}
                 alt={img.alt}
-                style={styles.image}
+                style={{
+                  ...styles.image,
+                  objectPosition: img.objectPosition ?? "center 20%",
+                }}
                 loading={i === 0 ? "eager" : "lazy"}
               />
               {img.caption && (
@@ -136,34 +146,15 @@ export default function ImageSlider({
         </div>
       </div>
 
-      {/* Botón anterior */}
-      <button
-        style={{ ...styles.arrow, ...styles.arrowPrev }}
-        onClick={scrollPrev}
-        aria-label="Anterior"
-      >
-        ‹
-      </button>
+      <button style={{ ...styles.arrow, ...styles.arrowPrev }} onClick={scrollPrev} aria-label="Anterior">‹</button>
+      <button style={{ ...styles.arrow, ...styles.arrowNext }} onClick={scrollNext} aria-label="Siguiente">›</button>
 
-      {/* Botón siguiente */}
-      <button
-        style={{ ...styles.arrow, ...styles.arrowNext }}
-        onClick={scrollNext}
-        aria-label="Siguiente"
-      >
-        ›
-      </button>
-
-      {/* Dots */}
       <div style={styles.dots}>
         {scrollSnaps.map((_, i) => (
           <button
             key={i}
             onClick={() => scrollTo(i)}
-            style={{
-              ...styles.dot,
-              ...(i === selectedIndex ? styles.dotActive : {}),
-            }}
+            style={{ ...styles.dot, ...(i === selectedIndex ? styles.dotActive : {}) }}
             aria-label={`Ir a la imagen ${i + 1}`}
           />
         ))}
@@ -177,31 +168,32 @@ const styles: Record<string, CSSProperties> = {
   wrapper: {
     position: "relative",
     width: "100%",
-    maxWidth: "960px",
-    margin: "0 auto",
-    borderRadius: "12px",
+    height: "100%",
     overflow: "hidden",
-    boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
-    background: "#0a1628",
+    background: "transparent",
   },
   viewport: {
     overflow: "hidden",
     width: "100%",
+    height: "100%",
   },
   container: {
     display: "flex",
     willChange: "transform",
+    height: "100%",
   },
   slide: {
     position: "relative",
     flex: "0 0 100%",
     minWidth: 0,
+    height: "100%",
   },
   image: {
     display: "block",
     width: "100%",
-    height: "480px",
+    height: "100%",
     objectFit: "cover",
+    objectPosition: "center 20%",
   },
   captionBox: {
     position: "absolute",

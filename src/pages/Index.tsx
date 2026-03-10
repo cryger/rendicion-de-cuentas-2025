@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import Footer from "../core/footer";
 import SabiasQue from "@/core/SabiasQue";
 import ImageSlider from "../core/ImageSlider";
+import SliderSection from "@/core/sliderSection";
+import VideoGallery from "@/core/VideoGallery";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -63,9 +65,10 @@ const Index = () => {
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-accent/10 rounded-xl">
                     <FileText className="w-6 h-6 text-accent" />
+                    
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 text-card-foreground">Reglamento</h3>
+                    <h3 className="font-semibold text-lg mb-2 text-card-foreground"><a href="https://esehospitalguaviare.gov.co/rendicion-de-cuentas-24/microsites/accountabilities/micro-2024/docs/Reglamento.pdf">Reglamento</a> </h3>
                     <p className="text-sm text-muted-foreground">Marco normativo y procedimientos de la institución</p>
                   </div>
                 </div>
@@ -89,32 +92,17 @@ const Index = () => {
                   Banco de Preguntas
                 </Button>
               </Link>
+              
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Photo Section */}
-      <section className="py-16 bg-gradient-to-br from-background via-secondary/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card rounded-2xl overflow-hidden shadow-[var(--card-shadow)] hover:shadow-[var(--hover-shadow)] transition-shadow duration-300">
-              <img 
-                src={teamPhoto} 
-                alt="Equipo Directivo Hospital San José del Guaviare"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Video Gallery Section*/}
+      <VideoGallery></VideoGallery>
 
       {/* Did You Know Section */}
-      <section className="sabias-section">
-
-        <ImageSlider></ImageSlider>
-
-      </section>
+      <SliderSection></SliderSection>
 
       {/* Footer */}
       <Footer />
