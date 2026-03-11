@@ -5,7 +5,7 @@ import { useEffect, useCallback, useState, CSSProperties } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import AdquisicionBiomedicos from "../assets/adquisicion_equipos_biomedicos.jpeg";
+import AdquisicionBiomedicos from "../assets/imagenes_diagnosticas.jpg";
 import AvanceHospital from "../assets/avance_hospital_2026.jpeg";
 import AtencionInfancia from "../assets/atencion_infancia.jpeg";
 import PersonalRural from "../assets/personal_nuevo_ingreso_rural.jpeg";
@@ -36,32 +36,32 @@ const DEFAULT_IMAGES: SlideImage[] = [
     caption: "¿Sabías que nuestro compromiso con tu salud se traduce en resultados reales?,Aquí te presentamos 5 grandes logros.",
     description: "Uno: Alcanzamos la cifra de 274 mil órdenes de laboratorio clínico, garantizando diagnósticos oportunos para nuestra gente.",
     ctaLabel: "Ver informe",
-    ctaHref: "/informes/infraestructura",
+    ctaHref: "/rendicion-de-cuentas-25/infraestructura/",
     ctaTarget: "_self",
   },
   {
     src: AtencionInfancia,
-    alt: "Logro 2",
-    caption: "Programas sociales ejecutados",
-    description: "Más de 15.000 familias fueron atendidas a través de programas de seguridad alimentaria, vivienda digna y apoyo psicosocial.",
+    alt: "Personal en Laboratorio",
+    caption: "274.000 Órdenes.",
+    description: "Alcanzamos la cifra de 274,000 Ordenes de Laboratorio Clinico, garantizando diagnosticos oportunos para nuestra gente",
     ctaLabel: "Conocer más",
     ctaHref: "/programas-sociales",
     ctaTarget: "_self",
   },
   {
     src: PersonalRural,
-    alt: "Logro 3",
-    caption: "Cobertura educativa ampliada",
-    description: "Se construyeron y dotaron 18 instituciones educativas, alcanzando una cobertura del 94% en educación básica primaria.",
+    alt: "Apoyo y transformacion de nuestros funcionarios",
+    caption: "Invertimos en Conocimiento",
+    description: "Invertimos en conocimiento: Brindamos apoyo a la formacion de nuestros funcionarios en los simposios y congresos Nacionales de Salud",
     ctaLabel: "Ver resultados",
     ctaHref: "/educacion",
     ctaTarget: "_self",
   },
   {
     src: AdquisicionBiomedicos,
-    alt: "Logro 4",
-    caption: "Adquisición de equipos biomédicos",
-    description: "Se modernizó el equipamiento médico de los centros de salud del departamento para mejorar la calidad de atención.",
+    alt: "Nuevos Equipos Biomedicos",
+    caption: "Nuevos Equipos Biomedicos",
+    description: "Durante la vigencia 2025, la institución fortaleció su capacidad de atención mediante la adquisición e implementación de nuevos equipos biomédicos de alta tecnología.",
     ctaLabel: "Ver informe",
     ctaHref: "/informes/equipos-biomedicos",
     ctaTarget: "_self",
