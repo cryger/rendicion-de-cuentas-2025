@@ -13,6 +13,9 @@ import Laboratorio from "../assets/Laboratorio.jpg";
 import Dotacion from "../assets/Dotacion.jpg";
 import Nacimiento from "../assets/Nacimiento.jfif";
 import Portafolio from "../assets/Servicios Nuevos.jpg";
+import Resolucion from "../assets/0211.png";
+import Convenio from "../assets/ACV.jpeg";
+import Simposio from "../assets/Simposio por la vida.jpg";
 
 // ── Tipos ─────────────────────────────────────────────────────────────────────
 interface SlideImage {
@@ -49,7 +52,7 @@ const DEFAULT_IMAGES: SlideImage[] = [
     caption: "274.000 Órdenes.",
     description: "Alcanzamos la cifra de 274,000 Ordenes de Laboratorio Clinico, garantizando diagnosticos oportunos para nuestra gente",
     ctaLabel: "Conocer más",
-    ctaHref: "/rendicion-de-cuentas-25/programas-sociales",
+    ctaHref: "/rendicion-de-cuentas-25/laboratorio",
     ctaTarget: "_self",
   },
   {
@@ -74,7 +77,7 @@ const DEFAULT_IMAGES: SlideImage[] = [
     src: Dotacion,
     alt: "Nueva dotacion para nuestro Hospital",
     caption: "Nueva dotacion para nuestro Hospital",
-    description: "Durante la vigencia 2025, la institución fortaleció su capacidad de atención mediante la adquisición e implementación de nuevos equipos biomédicos de alta tecnología.",
+    description: "Renovamos nuestra dotación con nuevas camillas, cunas, marcapasos y mesas para cirugía de cadera, Computadores, aires acondicionados de última generación.",
     ctaLabel: "Ver informe",
     ctaHref: "/rendicion-de-cuentas-25/equipos-biomedicos",
     ctaTarget: "_self",
@@ -95,6 +98,35 @@ const DEFAULT_IMAGES: SlideImage[] = [
     ctaHref: "/rendicion-de-cuentas-25/nuevos-servicios",
     ctaTarget: "_self",
   },
+  {
+    src: Resolucion,
+    alt: "Con la Resolucion 0211",
+    caption: "Con la Resolucion 0211",
+    description: "Destinamos mas de 1200 millones de pesos para transformar nuestra UCIM en una UCI de alta complejidad.",
+    ctaLabel: "Ver informe",
+    ctaHref: "/rendicion-de-cuentas-25/infraestructura/",
+    ctaTarget: "_self",
+  },
+  {
+    src: Convenio,
+    alt: "Minutos que salvan vidas!",
+    caption: "Minutos que salvan vidas!",
+    description: "Tenemos un convenio con Granada, Meta, para la atención inmediata de pacientes con ACV.",
+    ctaLabel: "Ver informe",
+    ctaHref: "/rendicion-de-cuentas-25/convenio-granada/",
+    ctaTarget: "_self",
+  },
+  {
+    src: Simposio,
+    alt: "Lideramos el aprendizaje",
+    caption: "Lideramos el aprendizaje",
+    description: "Lideramos el aprendizaje regional con nuestro 1er Simposio Médico por la Vida y la Paz, elevando el estándar de atención.",
+    ctaLabel: "Ver informe",
+    ctaHref: "/rendicion-de-cuentas-25/simposios/",
+    ctaTarget: "_self",
+
+  },
+
 ];
 
 export default function ImageSlider({

@@ -13,6 +13,9 @@ import Educacion from "./pages/Educacion";
 import ProgramasSociales from "./pages/ProgramasSociales";
 import EquiposBiomedicos from "./pages/EquiposBiomedicos";
 import Portafolio from "./pages/Portafolio";
+import ConvenioGranada from "./pages/ConvenioGranada";
+import Laboratorio from "./pages/Laboratorio";
+import Simposios from "./pages/Simposios";
 
 
 const queryClient = new QueryClient();
@@ -34,7 +37,9 @@ const App = () => (
           <Route path="/programas-sociales" element={<ProgramasSociales/>}/>
           <Route path="/equipos-biomedicos" element={<EquiposBiomedicos/>}/>
           <Route path="/nuevos-servicios" element={<Portafolio/>}/>
-
+          <Route path="/convenio-granada" element={<ConvenioGranada/>}/>
+          <Route path="/laboratorio" element={<Laboratorio/>}/>
+          <Route path="/simposios" element={<Simposios/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
