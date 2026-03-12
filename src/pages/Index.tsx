@@ -11,6 +11,7 @@ import SabiasQue from "@/core/SabiasQue";
 import ImageSlider from "../core/ImageSlider";
 import SliderSection from "@/core/sliderSection";
 import VideoGallery from "@/core/VideoGallery";
+import Reglamento from "../assets/Documentos/REGLAMENTO-RENDICION-DE-CUENTAS-2025.pdf"
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -68,7 +69,15 @@ const Index = () => {
                     
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 text-card-foreground"><a href="https://esehospitalguaviare.gov.co/rendicion-de-cuentas-24/microsites/accountabilities/micro-2024/docs/Reglamento.pdf">Reglamento</a> </h3>
+                    <h3 className="font-semibold text-lg mb-2 text-card-foreground">
+                      <a 
+                        href={Reglamento} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        Reglamento
+                      </a>
+                    </h3>
                     <p className="text-sm text-muted-foreground">Marco normativo y procedimientos de la institución</p>
                   </div>
                 </div>

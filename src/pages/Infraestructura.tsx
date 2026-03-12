@@ -167,21 +167,6 @@ const Infraestructura = () => {
         </div>
       </section>
 
-      {/* Imagen institucional */}
-      <section className="py-16 bg-gradient-to-br from-background via-secondary/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card rounded-2xl overflow-hidden shadow-[var(--card-shadow)]">
-              <img
-                src={avanceHospital}
-                alt="Avance construcción Hospital San José del Guaviare"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <Footer />
 

@@ -9,6 +9,10 @@ import AdquisicionBiomedicos from "../assets/imagenes_diagnosticas.jpg";
 import AvanceHospital from "../assets/avance_hospital_2026.jpeg";
 import AtencionInfancia from "../assets/atencion_infancia.jpeg";
 import PersonalRural from "../assets/personal_nuevo_ingreso_rural.jpeg";
+import Laboratorio from "../assets/Laboratorio.jpg";
+import Dotacion from "../assets/Dotacion.jpg";
+import Nacimiento from "../assets/Nacimiento.jfif";
+import Portafolio from "../assets/Servicios Nuevos.jpg";
 
 // ── Tipos ─────────────────────────────────────────────────────────────────────
 interface SlideImage {
@@ -40,12 +44,12 @@ const DEFAULT_IMAGES: SlideImage[] = [
     ctaTarget: "_self",
   },
   {
-    src: AtencionInfancia,
+    src: Laboratorio,
     alt: "Personal en Laboratorio",
     caption: "274.000 Órdenes.",
     description: "Alcanzamos la cifra de 274,000 Ordenes de Laboratorio Clinico, garantizando diagnosticos oportunos para nuestra gente",
     ctaLabel: "Conocer más",
-    ctaHref: "/programas-sociales",
+    ctaHref: "/rendicion-de-cuentas-25/programas-sociales",
     ctaTarget: "_self",
   },
   {
@@ -54,7 +58,7 @@ const DEFAULT_IMAGES: SlideImage[] = [
     caption: "Invertimos en Conocimiento",
     description: "Invertimos en conocimiento: Brindamos apoyo a la formacion de nuestros funcionarios en los simposios y congresos Nacionales de Salud",
     ctaLabel: "Ver resultados",
-    ctaHref: "/educacion",
+    ctaHref: "/rendicion-de-cuentas-25/educacion",
     ctaTarget: "_self",
   },
   {
@@ -63,7 +67,32 @@ const DEFAULT_IMAGES: SlideImage[] = [
     caption: "Nuevos Equipos Biomedicos",
     description: "Durante la vigencia 2025, la institución fortaleció su capacidad de atención mediante la adquisición e implementación de nuevos equipos biomédicos de alta tecnología.",
     ctaLabel: "Ver informe",
-    ctaHref: "/informes/equipos-biomedicos",
+    ctaHref: "/rendicion-de-cuentas-25/equipos-biomedicos",
+    ctaTarget: "_self",
+  },
+  {
+    src: Dotacion,
+    alt: "Nueva dotacion para nuestro Hospital",
+    caption: "Nueva dotacion para nuestro Hospital",
+    description: "Durante la vigencia 2025, la institución fortaleció su capacidad de atención mediante la adquisición e implementación de nuevos equipos biomédicos de alta tecnología.",
+    ctaLabel: "Ver informe",
+    ctaHref: "/rendicion-de-cuentas-25/equipos-biomedicos",
+    ctaTarget: "_self",
+  },
+  {
+    src: Nacimiento,
+    alt: "La Vida Florece",
+    caption: "La Vida Florece",
+    description: "Recibimos con amor a 934 niños y niñas que nacieron en nuestras instalaciones durante este periodo.",
+    
+  },
+  {
+    src: Portafolio,
+    alt: "Ampliamos nuestro Portafolio",
+    caption: "Ampliamos nuestro Portafolio",
+    description: "Nuevos servicios de Neurolisis, Fonoaudiología, Telemetrías, Polisomnografía y Ecografías Extramural.",
+    ctaLabel: "Ver informe",
+    ctaHref: "/rendicion-de-cuentas-25/nuevos-servicios",
     ctaTarget: "_self",
   },
 ];

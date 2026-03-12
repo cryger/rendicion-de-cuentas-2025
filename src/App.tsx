@@ -9,6 +9,10 @@ import Informe from "./pages/Informe";
 import Avisos from "./pages/Avisos";
 import Preguntas from "./pages/Preguntas";
 import Infraestructura from "./pages/Infraestructura";
+import Educacion from "./pages/Educacion";
+import ProgramasSociales from "./pages/ProgramasSociales";
+import EquiposBiomedicos from "./pages/EquiposBiomedicos";
+import Portafolio from "./pages/Portafolio";
 
 
 const queryClient = new QueryClient();
@@ -22,11 +26,16 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
           <Route path="/informe" element={<Informe />} />
           <Route path="/avisos" element={<Avisos />} />
           <Route path="/preguntas" element={<Preguntas/>} />
           <Route path="/infraestructura" element={<Infraestructura/>}/>
+          <Route path="/educacion" element={<Educacion/>}/>
+          <Route path="/programas-sociales" element={<ProgramasSociales/>}/>
+          <Route path="/equipos-biomedicos" element={<EquiposBiomedicos/>}/>
+          <Route path="/nuevos-servicios" element={<Portafolio/>}/>
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
