@@ -16,6 +16,7 @@ import Portafolio from "../assets/Servicios Nuevos.jpg";
 import Resolucion from "../assets/0211.png";
 import Convenio from "../assets/ACV.jpeg";
 import Simposio from "../assets/Simposio por la vida.jpg";
+import SimposioNacional from "../assets/Simposios Nacionales.png";
 
 // ── Tipos ─────────────────────────────────────────────────────────────────────
 interface SlideImage {
@@ -121,6 +122,16 @@ const DEFAULT_IMAGES: SlideImage[] = [
     alt: "Lideramos el aprendizaje",
     caption: "Lideramos el aprendizaje",
     description: "Lideramos el aprendizaje regional con nuestro 1er Simposio Médico por la Vida y la Paz, elevando el estándar de atención.",
+    ctaLabel: "Ver informe",
+    ctaHref: "/rendicion-de-cuentas-25/simposios/",
+    ctaTarget: "_self",
+
+  },
+  {
+    src: SimposioNacional,
+    alt: "Lideramos el aprendizaje",
+    caption: "Lideramos el aprendizaje",
+    description: "Lideramos el aprendizaje regional con nuestro 1er Simposio Nacional, elevando el estándar de atención.",
     ctaLabel: "Ver informe",
     ctaHref: "/rendicion-de-cuentas-25/simposios/",
     ctaTarget: "_self",
