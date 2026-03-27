@@ -101,6 +101,14 @@ const Informe = () => {
                 >
                   Descargar Informe de Gestión
                 </a>
+                <a
+                  href="https://esehospitalguaviare.gov.co/resourses/archivos/pdf/Informe%20Ejecutivo%20de%20RD%202025.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Descargar Informe de Rendicion de Cuentas 2025
+                </a>
               </Button>
             </div>
 
