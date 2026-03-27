@@ -87,7 +87,7 @@ const Informe = () => {
             </div>
 
             {/* Botón descarga */}
-            <div className="mt-10 flex justify-center">
+            <div className="mt-5 flex justify-center">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
@@ -101,6 +101,15 @@ const Informe = () => {
                 >
                   Descargar Informe de Gestión
                 </a>
+               
+              </Button>
+            </div>
+            <div className="mt-5 flex justify-center">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
+                asChild
+              >
                 <a
                   href="https://esehospitalguaviare.gov.co/resourses/archivos/pdf/Informe%20Ejecutivo%20de%20RD%202025.pdf"
                   download
@@ -108,9 +117,12 @@ const Informe = () => {
                   rel="noopener noreferrer"
                 >
                   Descargar Informe de Rendicion de Cuentas 2025
-                </a>
+              </a>
+               
               </Button>
             </div>
+
+            
 
             {/* Botón volver */}
             <div className="mt-6 flex justify-center">
